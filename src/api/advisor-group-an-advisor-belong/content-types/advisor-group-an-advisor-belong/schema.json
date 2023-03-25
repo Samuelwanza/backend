@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advisor_group_an_advisor_belongs",
+  "info": {
+    "singularName": "advisor-group-an-advisor-belong",
+    "pluralName": "advisor-group-an-advisor-belongs",
+    "displayName": "advisor_group_an_advisor_belong"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "advisor_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::advisor.advisor",
+      "inversedBy": "advisor_group_an_advisor_belongs"
+    },
+    "advisor_group_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::board-vs-advisor-group.board-vs-advisor-group",
+      "inversedBy": "advisor_group_an_advisor_belongs"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "national_managers",
+  "info": {
+    "singularName": "national-manager",
+    "pluralName": "national-managers",
+    "displayName": "National_manager",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bonds",
+  "info": {
+    "singularName": "bond",
+    "pluralName": "bonds",
+    "displayName": "Bond",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "face_value": {
+      "type": "float"
+    },
+    "maturity_period": {
+      "type": "float"
+    },
+    "start_date": {
+      "type": "datetime"
+    },
+    "end_date": {
+      "type": "datetime"
+    },
+    "p_country_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::participating-country.participating-country"
+    },
+    "bond_classes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bond-class.bond-class"
+    }
+  }
+}

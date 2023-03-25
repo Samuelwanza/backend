@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "board_a_director_belongs_tos",
+  "info": {
+    "singularName": "board-a-director-belongs-to",
+    "pluralName": "board-a-director-belongs-tos",
+    "displayName": "Board_a_director_belongs_to"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "trust_fund_a_board_manage": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::trust-fund-a-board-manage.trust-fund-a-board-manage",
+      "inversedBy": "board_a_director_belongs_tos"
+    },
+    "director_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::director.director",
+      "inversedBy": "board_a_director_belongs_tos"
+    }
+  }
+}

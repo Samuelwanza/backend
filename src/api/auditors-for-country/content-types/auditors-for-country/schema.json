@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "auditors_for_countries",
+  "info": {
+    "singularName": "auditors-for-country",
+    "pluralName": "auditors-for-countries",
+    "displayName": "Auditors_for_country",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "conservation_results_report": {
+      "type": "text",
+      "required": true
+    },
+    "p_country_ids": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::participating-country.participating-country"
+    },
+    "auditor_ids": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::auditors-identification.auditors-identification"
+    },
+    "escrow_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::escrow-account.escrow-account"
+    }
+  }
+}

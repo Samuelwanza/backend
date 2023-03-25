@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_details",
+  "info": {
+    "singularName": "payment-detail",
+    "pluralName": "payment-details",
+    "displayName": "Payment_detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ggv_fee_for_participant_country_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ggv-fee-for-participant-countrie.ggv-fee-for-participant-countrie"
+    },
+    "visa_holder_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::visa-holder.visa-holder"
+    },
+    "amount_paid": {
+      "type": "decimal",
+      "required": true
+    },
+    "escrow_account_transaction_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::escrow-account-transaction.escrow-account-transaction"
+    },
+    "customer_travel_history_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer-travel-history.customer-travel-history"
+    },
+    "paid": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

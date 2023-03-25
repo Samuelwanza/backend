@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ggv_fee_for_participant_countries",
+  "info": {
+    "singularName": "ggv-fee-for-participant-countrie",
+    "pluralName": "ggv-fee-for-participant-countries",
+    "displayName": "GGV_fee_for_participant_country",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "participating_country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::participating-country.participating-country"
+    },
+    "fee_neighbouring": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ggv-fee.ggv-fee"
+    },
+    "fee_for_g_20_nation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::fee-for-g20-nation.fee-for-g20-nation"
+    },
+    "fee_non_g_20_nation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::fee-for-non-g20-nation.fee-for-non-g20-nation"
+    }
+  }
+}

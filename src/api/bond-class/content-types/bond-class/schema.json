@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bond_classes",
+  "info": {
+    "singularName": "bond-class",
+    "pluralName": "bond-classes",
+    "displayName": "Bond_class",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "coupon_rate": {
+      "type": "float"
+    }
+  }
+}

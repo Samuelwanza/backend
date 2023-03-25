@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "escrow_accounts",
+  "info": {
+    "singularName": "escrow-account",
+    "pluralName": "escrow-accounts",
+    "displayName": "Escrow_account",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "p_country_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::participating-country.participating-country"
+    }
+  }
+}

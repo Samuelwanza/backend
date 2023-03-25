@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partners",
+  "info": {
+    "singularName": "partner",
+    "pluralName": "partners",
+    "displayName": "Partner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "organisation_name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "address": {
+      "type": "string",
+      "maxLength": 100,
+      "required": true
+    },
+    "years_in_partnership": {
+      "type": "integer",
+      "required": true
+    },
+    "participating_country_partner_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::participating-countries-partner.participating-countries-partner"
+    }
+  }
+}

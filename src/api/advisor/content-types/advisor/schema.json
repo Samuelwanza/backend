@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advisors",
+  "info": {
+    "singularName": "advisor",
+    "pluralName": "advisors",
+    "displayName": "Advisor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Years_of_experience": {
+      "type": "integer"
+    },
+    "passport_no": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10
+    },
+    "advisor_group_an_advisor_belongs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::advisor-group-an-advisor-belong.advisor-group-an-advisor-belong",
+      "mappedBy": "advisor_id"
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "Field_of_specialization": {
+      "type": "enumeration",
+      "enum": [
+        "Agriculture",
+        "IT"
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "board_vs_advisor_groups",
+  "info": {
+    "singularName": "board-vs-advisor-group",
+    "pluralName": "board-vs-advisor-groups",
+    "displayName": "board_vs_advisor_group"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "board_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trust-fund-a-board-manage.trust-fund-a-board-manage",
+      "inversedBy": "board_vs_advisor_group"
+    },
+    "advisor_group_an_advisor_belongs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::advisor-group-an-advisor-belong.advisor-group-an-advisor-belong",
+      "mappedBy": "advisor_group_id"
+    }
+  }
+}

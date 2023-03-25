@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "auditors_identifications",
+  "info": {
+    "singularName": "auditors-identification",
+    "pluralName": "auditors-identifications",
+    "displayName": "auditors_identification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "auditor_name": {
+      "type": "string",
+      "maxLength": 50,
+      "required": true
+    }
+  }
+}

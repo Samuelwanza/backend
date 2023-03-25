@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fee_for_non_g20_nations",
+  "info": {
+    "singularName": "fee-for-non-g20-nation",
+    "pluralName": "fee-for-non-g20-nations",
+    "displayName": "fee_non_g20_nation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stripe_id": {
+      "type": "string"
+    },
+    "price": {
+      "type": "float"
+    }
+  }
+}

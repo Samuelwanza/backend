@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_travel_histories",
+  "info": {
+    "singularName": "customer-travel-history",
+    "pluralName": "customer-travel-histories",
+    "displayName": "Customer_travel_history"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "arrival_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "departure_date": {
+      "type": "datetime"
+    }
+  }
+}

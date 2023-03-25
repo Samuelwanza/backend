@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ggv_fees",
+  "info": {
+    "singularName": "ggv-fee",
+    "pluralName": "ggv-fees",
+    "displayName": "Fee_neighbouring",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stripe_id": {
+      "type": "string"
+    },
+    "price": {
+      "type": "float"
+    }
+  }
+}

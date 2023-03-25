@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "escrow_account_transactions",
+  "info": {
+    "singularName": "escrow-account-transaction",
+    "pluralName": "escrow-account-transactions",
+    "displayName": "Escrow_account_transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "escrow_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::escrow-account.escrow-account"
+    },
+    "payment_detail_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-detail.payment-detail"
+    }
+  }
+}

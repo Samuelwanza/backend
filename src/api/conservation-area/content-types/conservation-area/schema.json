@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conservation_areas",
+  "info": {
+    "singularName": "conservation-area",
+    "pluralName": "conservation-areas",
+    "displayName": "conservation_area",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "short_description": {
+      "type": "text",
+      "required": true
+    },
+    "long_description": {
+      "type": "richtext",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus. Porttitor eget dolor morbi non arcu risus. Cras sed felis eget velit aliquet sagittis id consectetur purus. ",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "country_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trust_fund_a_board_manages",
+  "info": {
+    "singularName": "trust-fund-a-board-manage",
+    "pluralName": "trust-fund-a-board-manages",
+    "displayName": "Trust_fund_a_board_manage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Trust_fund_ID": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trust-fund-country.trust-fund-country",
+      "inversedBy": "trust_fund_a_board_manage"
+    },
+    "board_a_director_belongs_tos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::board-a-director-belongs-to.board-a-director-belongs-to",
+      "mappedBy": "trust_fund_a_board_manage"
+    },
+    "board_vs_advisor_group": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::board-vs-advisor-group.board-vs-advisor-group",
+      "inversedBy": "board_id"
+    }
+  }
+}

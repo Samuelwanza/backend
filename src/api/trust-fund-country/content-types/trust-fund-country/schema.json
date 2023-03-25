@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trust_fund_countries",
+  "info": {
+    "singularName": "trust-fund-country",
+    "pluralName": "trust-fund-countries",
+    "displayName": "trust_fund_country",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "p_country_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::participating-country.participating-country"
+    },
+    "beneficiaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::beneficiary.beneficiary",
+      "mappedBy": "trust_fund_id"
+    },
+    "trust_fund_a_board_manage": {
+      "type": "text",
+      "relation": "oneToOne",
+      "target": "api::trust-fund-a-board-manage.trust-fund-a-board-manage",
+      "inversedBy": "Trust_fund_ID"
+    }
+  }
+}

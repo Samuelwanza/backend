@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "participating_countries_partners",
+  "info": {
+    "singularName": "participating-countries-partner",
+    "pluralName": "participating-countries-partners",
+    "displayName": "Participating_countries_partner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "p_country_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::participating-country.participating-country"
+    }
+  }
+}

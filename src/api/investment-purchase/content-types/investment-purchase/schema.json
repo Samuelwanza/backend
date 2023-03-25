@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "investment_purchases",
+  "info": {
+    "singularName": "investment-purchase",
+    "pluralName": "investment-purchases",
+    "displayName": "Investment_purchase",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount_received": {
+      "type": "decimal"
+    },
+    "date_purchased": {
+      "type": "datetime"
+    },
+    "bond_ids": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bond.bond"
+    },
+    "investor_bond_buyer_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::investor-bond-buyer.investor-bond-buyer"
+    },
+    "trust_fund_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trust-fund-country.trust-fund-country"
+    }
+  }
+}

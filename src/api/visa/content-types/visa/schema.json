@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visas",
+  "info": {
+    "singularName": "visa",
+    "pluralName": "visas",
+    "displayName": "visa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "payment_detail_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-detail.payment-detail"
+    },
+    "qr_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Expired",
+        "Rejected",
+        "Under Review"
+      ],
+      "default": "Active"
+    },
+    "qr_image": {
+      "type": "text"
+    }
+  }
+}

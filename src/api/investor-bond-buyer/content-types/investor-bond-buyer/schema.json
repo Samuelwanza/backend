@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "investor_bond_buyers",
+  "info": {
+    "singularName": "investor-bond-buyer",
+    "pluralName": "investor-bond-buyers",
+    "displayName": "Investor_bond_buyer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "organization": {
+      "type": "string",
+      "maxLength": 50,
+      "required": true
+    },
+    "passport_no": {
+      "type": "string",
+      "maxLength": 10,
+      "required": true
+    },
+    "admin_user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "address_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::address.address"
+    }
+  }
+}

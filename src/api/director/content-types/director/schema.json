@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "directors",
+  "info": {
+    "singularName": "director",
+    "pluralName": "directors",
+    "displayName": "Director",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "field_of_specialization": {
+      "type": "string",
+      "maxLength": 50,
+      "required": true
+    },
+    "years_of_experience": {
+      "type": "integer",
+      "required": true
+    },
+    "passport_no": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10
+    },
+    "board_a_director_belongs_tos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::board-a-director-belongs-to.board-a-director-belongs-to",
+      "mappedBy": "director_id"
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}

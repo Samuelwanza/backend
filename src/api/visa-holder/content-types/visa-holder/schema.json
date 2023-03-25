@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visa_holders",
+  "info": {
+    "singularName": "visa-holder",
+    "pluralName": "visa-holders",
+    "displayName": "visa_holder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "passport_no": {
+      "type": "string",
+      "maxLength": 10,
+      "required": true
+    },
+    "passport_expiry": {
+      "type": "date"
+    },
+    "address": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::address.address"
+    },
+    "conservation_areas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::conservation-area.conservation-area"
+    },
+    "user_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-detail.user-detail"
+    }
+  }
+}
