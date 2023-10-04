@@ -10,19 +10,21 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-documentation": "^4.3.4",
-    "@strapi/plugin-graphql": "4.3.4",
-    "@strapi/plugin-i18n": "4.3.4",
-    "@strapi/plugin-users-permissions": "4.3.4",
-    "@strapi/provider-email-sendgrid": "^4.2.3",
-    "@strapi/provider-upload-cloudinary": "^4.2.3",
-    "@strapi/strapi": "4.3.4",
-    "graphql": "^15.8.0",
-    "pg": "8.6.0",
-    "pg-connection-string": "^2.5.0",
-    "qrcode": "^1.5.0",
-    "sendgrid": "^5.2.3",
-    "strapi-utils": "^3.6.10"
+    "@strapi/plugin-documentation": "^4.14.3",
+    "@strapi/plugin-graphql": "^4.14.3",
+    "@strapi/plugin-i18n": "^4.14.3",
+    "@strapi/plugin-users-permissions": "^4.14.3",
+    "@strapi/provider-email-sendgrid": "^4.14.3",
+    "@strapi/provider-upload-cloudinary": "^4.14.3",
+    "@strapi/strapi": "^4.14.3",
+    "graphql": "^16.8.1",
+    "pg": "^8.11.3",
+    "pg-connection-string": "^2.6.2",
+    "qrcode": "^1.5.3",
+    "sendgrid": "^5.2.3"
+  },
+  "resolutions": {
+    "graphql": "^16.8.1"
   },
   "author": {
     "name": "A Strapi developer"
@@ -31,7 +33,7 @@
     "uuid": "870d1e9e-5c67-4f73-b6a5-795bc52b7d92"
   },
   "engines": {
-    "node": ">=12.x.x <=16.x.x",
+    "node": ">=16.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
